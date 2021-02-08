@@ -2,10 +2,22 @@ package kulkov.JavaCore.Lesson6;
 
 public class Cat {
 
+    public String getName() {
+        return name;
+    }
+
+    public int getAppetite() {
+        return appetite;
+    }
+
     // Fields.
     private String name;
     private int appetite;
     private boolean full = false;
+
+    public boolean isFull() {
+        return full;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -27,6 +39,6 @@ public class Cat {
 
     // Methods.
     public void eat(Plate p) {
-        p.decreaseFood(appetite);
+        full = p.decreaseFood(appetite);
     }
 }

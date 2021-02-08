@@ -18,12 +18,25 @@ public class Plate {
         System.out.println("plate: " + food);
     }
 
-    public void decreaseFood(int n) {
-
-        if(n > food)    {
-            System.out.printf("Insufficient balance!\n");
+    public void increaseFood(int n) {
+        if(n >= 0)  {
+            food += n;
         } else {
-            food -= n;
+            System.out.printf("Insufficient value!\n");
         }
+    }
+
+    // Уменьшение еды.
+    // Если аппетит (параметр n) больше, чем остаток (food) - остаток остаётся, результат = false.
+    public boolean decreaseFood(int n) {
+
+        boolean result = false;
+
+        if(n < food) {
+            food -= n;
+            result = true;
+        }
+
+        return result;
     }
 }
