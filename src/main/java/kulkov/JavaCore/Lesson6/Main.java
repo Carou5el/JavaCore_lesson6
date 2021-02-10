@@ -5,6 +5,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+    
         int CATS_ARRAY_SIZE = 10;
         int PLATE_INIT_SIZE = 30;
 
@@ -14,14 +15,19 @@ public class Main {
 
         // Вывод инфы об объекте "Тарелка".
         plate.info();
+        
+        // Команда "Обедать"!
         letEat(cats, plate);
-
+        
+        // Получаем инфу о свойствах котеек.
         for(Cat cc : cats) {
             System.out.printf("Name: %s\t full: %b\n", cc.getName(), cc.isFull());
         }
 
         plate.info();
+        // Подкинем еды в тарелку.
         plate.increaseFood(10);
+        // "Обедать"!
         letEat(cats, plate);
 
         for(Cat cc : cats) {

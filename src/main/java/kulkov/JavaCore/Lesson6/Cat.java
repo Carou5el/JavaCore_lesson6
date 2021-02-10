@@ -13,7 +13,7 @@ public class Cat {
     // Fields.
     private String name;
     private int appetite;
-    private boolean full = false;
+    private boolean full = false;                       // "Сытость" котейки.
 
     public boolean isFull() {
         return full;
